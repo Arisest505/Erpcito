@@ -10,3 +10,80 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+
+
+Route::get('/logistica', function () {
+    return view('logistica');
+})->name('logistica');
+
+Route::get('/contabilidad', function () {
+    return view('contabilidad');
+})->name('contabilidad');
+
+Route::get('/finanzas', function () {
+    return view('finanzas');
+})->name('finanzas');
+
+Route::get('/linea_avicola', function () {
+    return view('linea_avicola');
+})->name('linea_avicola');
+
+Route::get('/gestor_produccion', function () {
+    return view('gestor_produccion');
+})->name('gestor_produccion');
+
+Route::get('/logistica', function () {
+    return view('logistica');
+})->name('logistica');
+
+Route::get('/logistica/almacenes', function () {
+    return view('almacenes');
+})->name('almacenes');
+
+Route::get('/logistica/categoria_productos', function () {
+    return view('categoria_productos');
+})->name('categoria_productos');
+
+Route::get('/logistica/regla_abastecimiento', function () {
+    return view('regla_abastecimiento');
+})->name('regla_abastecimiento');
+
+Route::get('/logistica/unidad_medida', function () {
+    return view('unidad_medida');
+})->name('unidad_medida');
+
+Route::get('/logistica/stock', function () {
+    return view('stock');
+})->name('stock');
+
+Route::get('/logistica/historial_movimientos', function () {
+    return view('historial_movimientos');
+})->name('historial_movimientos');
+
+Route::get('/logistica/analisis_movimiento', function () {
+    return view('analisis_movimiento');
+})->name('analisis_movimiento');
+
+Route::get('/logistica/rendimiento', function () {
+    return view('rendimiento');
+})->name('rendimiento');
+
+Route::get('/logistica/productos', function () {
+    return view('productos');
+})->name('productos');
+
+Route::get('/logistica/seguimiento', function () {
+    return view('seguimiento');
+})->name('seguimiento');
+
+Route::get('/logistica/recepcion', function () {
+    return view('recepcion');
+})->name('recepcion');
+
+Route::get('/logistica/entrega', function () {
+    return view('entrega');
+})->name('entrega');
+
+Route::get('/logistica/inventario', function () {
+    return view('inventario');
+})->name('inventario');
