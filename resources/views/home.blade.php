@@ -1,10 +1,14 @@
 
-
-@extends('layouts.app')
     <!-- Scripts -->
     @vite(['resources/css/home.css', 'resources/js/app.js'])
+
+
+<!-- resources/views/home.blade.php -->
+@extends('layouts.app')
+
 @section('content')
 <div class="container">
+    @include('layouts.navbar')
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -17,11 +21,10 @@
                         </div>
                     @endif
 
-                    {{ __('Estas en linea!') }}
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
-
