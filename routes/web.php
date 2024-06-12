@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AlmacenController; // Asegúrate de importar el controlador adecuado
 
 Route::get('/', function () {
     return view('index');
@@ -87,3 +88,12 @@ Route::get('/logistica/entrega', function () {
 Route::get('/logistica/inventario', function () {
     return view('inventario');
 })->name('inventario');
+
+
+
+//aca se pondran las rutas para la creacion de datos para cada uno de las partes "LOGISTICA"
+
+
+
+Route::get('/almacenes', [AlmacenController::class, 'index'])->name('almacenes');
+Route::post('/almacenes/crear', [AlmacenController::class, 'crear'])->name('crear_almacen');
