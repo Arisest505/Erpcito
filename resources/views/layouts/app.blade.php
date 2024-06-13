@@ -1,4 +1,3 @@
-<!-- resources/views/layouts/app.blade.php -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -11,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/navbar.css', 'resources/js/app.js'])
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,7 +18,10 @@
 </head>
 <body>
     <div id="app">
-        <!-- Navbar no está aquí para que no se muestre globalmente -->
+        @if (!in_array(Route::currentRouteName(), ['login', 'register' , 'categoria_productos', 'almacenes']))
+            @include('layouts.navbar')
+        @endif
+
         <main class="py-4">
             @yield('content')
         </main>

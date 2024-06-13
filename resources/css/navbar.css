@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    color: white;
+}
+.navbar-logo {
+    height: 40px;
+}
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+.navbar-menu a:hover {
+    color: #f0f0f0; /* Cambia el color del texto al pasar el mouse */
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7); /* Sombras blanca más pronunciada */
+}
+.navbar-menu a.active {
+    color: #666; /* Cambia el color del texto cuando está activo */
+}
+.navbar-user {
+    display: flex;
+    align-items: center;
+}
+.navbar-user a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}

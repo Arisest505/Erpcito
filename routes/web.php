@@ -1,8 +1,10 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\AlmacenController; // Asegúrate de importar el controlador adecuado
+
+
+use App\Http\Controllers\AlmacenController;
+use App\Http\Controllers\CategoriaProductosController;
 
 Route::get('/', function () {
     return view('index');
@@ -37,13 +39,6 @@ Route::get('/logistica', function () {
     return view('logistica');
 })->name('logistica');
 
-Route::get('/logistica/almacenes', function () {
-    return view('almacenes');
-})->name('almacenes');
-
-Route::get('/logistica/categoria_productos', function () {
-    return view('categoria_productos');
-})->name('categoria_productos');
 
 Route::get('/logistica/regla_abastecimiento', function () {
     return view('regla_abastecimiento');
@@ -96,4 +91,8 @@ Route::get('/logistica/inventario', function () {
 
 
 Route::get('/almacenes', [AlmacenController::class, 'index'])->name('almacenes');
-Route::post('/almacenes/crear', [AlmacenController::class, 'crear'])->name('crear_almacen');
+
+
+
+Route::get('/categoria-productos', [CategoriaProductosController::class, 'index'])->name('categoria_productos');
+

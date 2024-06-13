@@ -4,12 +4,11 @@
 
 
 <!-- resources/views/home.blade.php -->
-@extends('layouts.app')
 
+@extends('layouts.app')
 @section('content')
 <div class="container">
-    @include('layouts.navbar')
-    <div class="row justify-content-center">
+   <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>

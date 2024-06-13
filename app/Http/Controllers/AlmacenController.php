@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Almacen;
 
 class AlmacenController extends Controller
 {
     public function index()
     {
-        $almacenes = Almacen::all();
-        return view('almacenes', compact('almacenes'));
+        // Lógica para mostrar la vista de almacenes
+        return view('almacenes');
+    }
+
+    public function crear(Request $request)
+    {
+        // Lógica para crear un nuevo almacén
     }
 }
-
