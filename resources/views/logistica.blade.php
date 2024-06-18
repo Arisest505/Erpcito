@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Carga de recursos con Vite -->
-    @vite(['resources/css/logistica.css'])
+    <link rel="stylesheet" href="{{ asset('css/logistica.css') }}">
 
     <!-- Contenedor principal -->
     <div class="container-fluid">
@@ -22,6 +22,7 @@
             </button>
             <div class="dropdown-container">
                 <a href="{{ route('almacenes') }}">Almacenes</a>
+                <a href="{{ route('crear') }}">Crear</a>
                 <a href="{{ route('categoria_productos') }}">Categoría Productos</a>
                 <a href="{{ route('regla_abastecimiento') }}">Regla de Abastecimiento</a>
                 <a href="{{ route('unidad_medida') }}">Unidad de Medida</a>
@@ -155,4 +156,5 @@ function loadReglaAbastecimientoContent() {
 // Agregar más funciones para cargar contenido de otros enlaces del menú según sea necesario
 
     </script>
+
 @endsection

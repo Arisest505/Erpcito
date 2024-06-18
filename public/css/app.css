@@ -6,7 +6,7 @@ body {
 }
 
 .navbar {
-    background-color: #ffffff;
+    background-color: #000000;
     border-bottom: 1px solid #e3e6f0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #007bff;
+    color: #f3f8fd;
 }
 
 .dropdown-menu {

@@ -3,17 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Almacen;
 
 class AlmacenController extends Controller
 {
     public function index()
     {
-        // Lógica para mostrar la vista de almacenes
-        return view('almacenes');
+        $almacenes = Almacen::all();
+        return view('almacenes', compact('almacenes'));
     }
 
-    public function crear(Request $request)
+    public function store(Request $request)
     {
-        // Lógica para crear un nuevo almacén
+        // Validar datos
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'ubicacion' => 'required|string|max:255',
+        ]);
+
+        // Crear nuevo almacén
+        $almacen = new Almacen();
+        $almacen->nombre = $request->nombre;
+        $almacen->ubicacion = $request->ubicacion;
+        $almacen->save();
+
+        return redirect()->back()->with('success', 'Almacén creado correctamente.');
     }
 }

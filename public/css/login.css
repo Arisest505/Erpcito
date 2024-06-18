@@ -1,0 +1,68 @@
+/* styles.css */
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    margin-top: 50px; /* Margen superior */
+}
+
+/* Estilo para los encabezados de tarjeta */
+.card-header {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    font-size: 1.25rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    padding: 15px; /* Espaciado interno */
+    border-bottom: 1px solid #ccc; /* Borde inferior gris claro */
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+}
+
+/* Estilo para las etiquetas de los campos */
+.col-form-label {
+    color: #000; /* Texto negro */
+}
+
+/* Estilo para los campos de entrada */
+.form-control {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+/* Estilo para los botones */
+.btn {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #000; /* Borde negro */
+}
+
+/* Estilo para los enlaces en línea */
+.btn-link {
+    color: #000; /* Texto negro */
+}
+
+/* Estilo para la casilla de verificación y su etiqueta */
+.form-check-input {
+    background-color: #fff; /* Fondo blanco */
+    border-color: #000; /* Borde negro */
+}
+
+.form-check-label {
+    color: #000; /* Texto negro */
+}
+
+/* Estilo para el mensaje de error de validación */
+.invalid-feedback {
+    color: #dc3545; /* Color de error estándar de Bootstrap */
+}

@@ -84,14 +84,22 @@ Route::get('/logistica/inventario', function () {
     return view('inventario');
 })->name('inventario');
 
+Route::get('/logistica/almacen_crear', function () {
+    return view('almacen_crear');
+})->name('almacen_crear');
 
+Route::get('/logistica/crear', function () {
+    return view('crear');
+})->name('crear');
 
 //aca se pondran las rutas para la creacion de datos para cada uno de las partes "LOGISTICA"
 
 
 
-Route::get('/almacenes', [AlmacenController::class, 'index'])->name('almacenes');
 
+
+Route::get('/almacenes', [AlmacenController::class, 'index'])->name('almacenes');
+Route::post('/almacens', [AlmacenController::class, 'store'])->name('almacens.store');
 
 
 Route::get('/categoria-productos', [CategoriaProductosController::class, 'index'])->name('categoria_productos');

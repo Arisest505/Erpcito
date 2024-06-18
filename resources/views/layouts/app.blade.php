@@ -9,12 +9,12 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/css/navbar.css', 'resources/js/app.js'])
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -26,5 +26,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    @yield('scripts')
 </body>
 </html>

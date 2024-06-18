@@ -13,7 +13,7 @@
     <title>Página Principal</title>
 
         <!-- Scripts -->
-        @vite(['resources/css/principal.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('css/principal.css') }}">
 </head>
 <body>
     <h1>Bienvenido a la Página Principal</h1>

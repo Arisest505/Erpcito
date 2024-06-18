@@ -1,6 +1,6 @@
 
     <!-- Scripts -->
-    @vite(['resources/css/home.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
 
 <!-- resources/views/home.blade.php -->

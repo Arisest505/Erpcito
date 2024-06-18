@@ -1,0 +1,88 @@
+/* register.css */
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.register-card {
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    color: #000;
+    font-size: 1.1rem; /* Tamaño de fuente para campos de entrada */
+    padding: 10px; /* Añadir un poco de espacio interno */
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Tamaño de fuente para botones */
+    padding: 10px 20px; /* Ajustar el padding para hacer los botones más grandes */
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* register.css */
+
+.btn-back-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* register.css */
+
+
+
+.btn-back {
+    color: #ffffff; /* Color del texto */
+    background-color: #000000; /* Fondo negro */
+    border-color: black; /* Sin borde */
+    padding: 5px 10px; /* Relleno del botón */
+    font-size: 1rem; /* Tamaño de fuente */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 0px; /* Bordes redondeados */
+    display: inline-block; /* Mostrar como bloque en línea */
+
+}
+
+.btn-back:hover {
+    background-color: #ffffff; /* Cambio de color de fondo al pasar el mouse */
+    color: #000000; /* Cambio de color del texto al pasar el mouse */
+    border-color: #000000;
+}
+
+.btn-back:focus {
+    outline: none; /* Sin contorno al enfocar */
+}

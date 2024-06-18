@@ -1,0 +1,74 @@
+/* almacen.css */
+
+/* Estilo para el contenedor del formulario */
+#formulario {
+    border: 2px solid #000; /* Borde negro */
+    padding: 20px; /* Espacio interior */
+    margin-bottom: 20px; /* Espacio inferior */
+    background-color: #f8f9fa; /* Color de fondo blanco grisáceo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para las etiquetas del formulario */
+#formulario label {
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.1em; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Espacio inferior */
+    display: block; /* Bloque para mejor control de layout */
+}
+
+/* Estilo para los campos del formulario */
+#formulario .form-control {
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio inferior */
+    padding: 10px; /* Espacio interior */
+    font-size: 1em; /* Tamaño de fuente */
+}
+
+/* Estilo para los botones del formulario */
+#formulario .btn {
+    font-size: 1em; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espacio interior */
+    margin-top: 10px; /* Espacio superior */
+    background-color: #000000; /* Color de fondo azul */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #000000; /* Borde azul */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+#formulario .btn:hover {
+    background-color: #ffffff; /* Color de fondo azul más oscuro al pasar el mouse */
+    border-color: #ffffff; /* Borde azul más oscuro al pasar el mouse */
+    color: #030303;
+}
+
+
+/* Estilo para los botones del formulario */
+#formulario .btn {
+    font-size: 1em; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espacio interior */
+    margin-top: 10px; /* Espacio superior */
+}
+
+/* Estilo para la tabla */
+.table {
+    border: 1px solid #000; /* Borde negro */
+    border-collapse: collapse; /* Colapsar bordes */
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid #000; /* Borde negro */
+    padding: 8px; /* Espacio interior */
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+.table thead {
+    background-color: #343a40; /* Fondo gris oscuro para encabezado */
+    color: #fff; /* Texto blanco para encabezado */
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fondo gris claro para filas impares */
+}

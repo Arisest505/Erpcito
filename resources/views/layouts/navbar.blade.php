@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Horizontal</title>
-    @vite(['resources/css/app.css', 'resources/css/navbar.css', 'resources/js/app.js'])
-
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 </head>
 <body>
     <nav class="navbar">
@@ -43,7 +42,8 @@
 
         <!-- Logo a la derecha -->
         <a href="#">
-            <img src="logo.png" alt="Logo" class="navbar-logo">
+            <img src="{{ asset('img/Image_fox_white.png') }}" alt="Logo" class="navbar-logo">
+
         </a>
     </nav>
 </body>

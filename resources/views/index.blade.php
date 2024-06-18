@@ -6,7 +6,7 @@
     <title>Inicio</title>
 
         <!-- Scripts -->
-        @vite(['resources/css/index.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 
 </head>
 <body>
