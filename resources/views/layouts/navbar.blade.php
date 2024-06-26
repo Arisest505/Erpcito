@@ -39,6 +39,13 @@
             <a href="{{ route('linea_avicola') }}">Línea Avícola</a>
             <a href="{{ route('gestor_produccion') }}">Gestor de Producción</a>
         </div>
+        <!-- Boton del BackUp -->
+        <div class="backup-btn">
+            <a href="{{ route('backup.download') }}" class="btn btn-primary">Descargar Backup</a>
+        </div>
+
+
+
 
         <!-- Logo a la derecha -->
         <a href="#">

@@ -1,10 +1,9 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-
 use App\Http\Controllers\AlmacenController;
 use App\Http\Controllers\CategoriaProductosController;
+use App\Http\Controllers\BackupController;
 
 Route::get('/', function () {
     return view('index');
@@ -13,7 +12,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
-
 
 Route::get('/logistica', function () {
     return view('logistica');
@@ -38,7 +36,6 @@ Route::get('/gestor_produccion', function () {
 Route::get('/logistica', function () {
     return view('logistica');
 })->name('logistica');
-
 
 Route::get('/logistica/regla_abastecimiento', function () {
     return view('regla_abastecimiento');
@@ -84,23 +81,17 @@ Route::get('/logistica/inventario', function () {
     return view('inventario');
 })->name('inventario');
 
-Route::get('/logistica/almacen_crear', function () {
-    return view('almacen_crear');
-})->name('almacen_crear');
-
-Route::get('/logistica/crear', function () {
-    return view('crear');
-})->name('crear');
-
-//aca se pondran las rutas para la creacion de datos para cada uno de las partes "LOGISTICA"
-
-
-
-
-
+// Rutas para Almacenes
 Route::get('/almacenes', [AlmacenController::class, 'index'])->name('almacenes');
 Route::post('/almacens', [AlmacenController::class, 'store'])->name('almacens.store');
+Route::get('/almacens/{id}/edit', [AlmacenController::class, 'edit'])->name('almacens.edit');
+Route::put('/almacens/{id}', [AlmacenController::class, 'update'])->name('almacens.update');
 
 
+// Rutas para Categoría de Productos
 Route::get('/categoria-productos', [CategoriaProductosController::class, 'index'])->name('categoria_productos');
 
+
+
+
+Route::get('/backup', [BackupController::class, 'download'])->name('backup.download');

@@ -29,12 +29,13 @@ return [
     */
 
     'disks' => [
+    'local' => [
+        'driver' => 'local',
+        'root' => storage_path('app'),
+    ],
+    // Otros discos configurados aquí...
 
-        'local' => [
-            'driver' => 'local',
-            'root' => storage_path('app'),
-            'throw' => false,
-        ],
+
 
         'public' => [
             'driver' => 'local',
@@ -55,8 +56,8 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
-
     ],
+
 
     /*
     |--------------------------------------------------------------------------
