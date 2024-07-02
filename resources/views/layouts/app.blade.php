@@ -18,7 +18,8 @@
 </head>
 <body>
     <div id="app">
-        @if (!in_array(Route::currentRouteName(), ['login', 'register' , 'categoria_productos', 'almacenes']))
+
+        @if (!request()->is('categoria_productos', 'almacenes', 'regla_abastecimiento'))
             @include('layouts.navbar')
         @endif
 

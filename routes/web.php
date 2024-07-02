@@ -2,8 +2,11 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AlmacenController;
-use App\Http\Controllers\CategoriaProductosController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BackupController;
+use App\Http\Controllers\SupplyRuleController;
+
+
 
 Route::get('/', function () {
     return view('index');
@@ -88,10 +91,15 @@ Route::get('/almacens/{id}/edit', [AlmacenController::class, 'edit'])->name('alm
 Route::put('/almacens/{id}', [AlmacenController::class, 'update'])->name('almacens.update');
 
 
-// Rutas para Categoría de Productos
-Route::get('/categoria-productos', [CategoriaProductosController::class, 'index'])->name('categoria_productos');
 
 
-
-
+//Ruta para el BACKUP de la base de datos
 Route::get('/backup', [BackupController::class, 'download'])->name('backup.download');
+
+// Ruta para mostrar la lista de productos
+Route::get('/categoria_productos', [ProductController::class, 'index'])->name('categoria_productos.index');
+
+// Rutas para regla de abastecimiento
+Route::resource('supply_rules', SupplyRuleController::class);
+Route::get('/regla_abastecimiento', [SupplyRuleController::class, 'index'])->name('regla_abastecimiento');
+Route::post('/supply_rules', [SupplyRuleController::class, 'store'])->name('supply_rules.store');

@@ -22,10 +22,11 @@
             </button>
             <div class="dropdown-container">
                 <a href="{{ route('almacenes') }}">Almacenes</a>
-                <a href="{{ route('categoria_productos') }}">Categoría Productos</a>
+                <a href="{{ route('categoria_productos.index') }}">Categoría Productos</a>
                 <a href="{{ route('regla_abastecimiento') }}">Regla de Abastecimiento</a>
                 <a href="{{ route('unidad_medida') }}">Unidad de Medida</a>
             </div>
+
             <button class="dropdown-btn">Informe
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -88,12 +89,16 @@
 
         // Control de los botones desplegables
         document.addEventListener('DOMContentLoaded', function() {
-    var dropdownBtns = document.querySelectorAll('.dropdown-btn');
-    dropdownBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var dropdownContent = this.nextElementSibling;
-            dropdownContent.classList.toggle('show');
+        var dropdownBtns = document.querySelectorAll('.dropdown-btn');
+        dropdownBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var dropdownContent = this.nextElementSibling;
+                dropdownContent.classList.toggle('show');
+            });
         });
+
+
+
     });
 
     // Agregar eventos clic para los enlaces del menú
@@ -103,32 +108,38 @@
         loadAlmacenesContent(); // Llamar a función para cargar contenido de Almacenes
     });
 
-    var reglaAbastecimientoLink = document.querySelector('.dropdown-container a[href="{{ route('regla_abastecimiento') }}"]');
+    // Agregar eventos clic para los enlaces del menú
+    var categoriaProductosLink = document.querySelector('.dropdown-container a[href="{{ route('categoria_productos.index') }}"]');
+        if (categoriaProductosLink) {
+            categoriaProductosLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Evitar la navegación normal
+                loadCategoriaProductosContent(); // Llamar a función para cargar contenido de Categoría Productos
+            });
+        }
+
+        // Agregar más eventos clic para otros enlaces de menú según sea necesario
+        var reglaAbastecimientoLink = document.querySelector('.dropdown-container a[href="{{ route('regla_abastecimiento') }}"]');
     reglaAbastecimientoLink.addEventListener('click', function(event) {
         event.preventDefault();
         loadReglaAbastecimientoContent();
     });
 
-    var categoriaProductosLink = document.querySelector('.dropdown-container a[href="{{ route('categoria_productos') }}"]');
-categoriaProductosLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Evitar la navegación normal
-    loadCategoriaProductosContent(); // Llamar a función para cargar contenido de Categoría Productos
-});
 
-function loadCategoriaProductosContent() {
-    fetch("{{ route('categoria_productos') }}")
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('dynamic-content').innerHTML = html;
-        })
-        .catch(error => {
-            console.error('Error al cargar el contenido de Categoría Productos:', error);
-        });
-}
+    function loadCategoriaProductosContent() {
+        fetch("{{ route('categoria_productos.index') }}")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('dynamic-content').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error al cargar el contenido de Categoría Productos:', error);
+            });
+    }
+
 
 
     // Agregar más eventos clic para otros enlaces de menú según sea necesario
-});
+
 
 function loadAlmacenesContent() {
     fetch("{{ route('almacenes') }}")
@@ -142,18 +153,18 @@ function loadAlmacenesContent() {
 }
 
 function loadReglaAbastecimientoContent() {
-    fetch("{{ route('regla_abastecimiento') }}")
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('dynamic-content').innerHTML = html;
-        })
-        .catch(error => {
-            console.error('Error al cargar el contenido de Regla de Abastecimiento:', error);
-        });
-}
-
+            fetch("{{ route('regla_abastecimiento') }}")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('dynamic-content').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error al cargar el contenido de Regla de Abastecimiento:', error);
+                });
+        }
 // Agregar más funciones para cargar contenido de otros enlaces del menú según sea necesario
 
     </script>
+
 
 @endsection

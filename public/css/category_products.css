@@ -1,0 +1,113 @@
+/* category_products.css */
+
+/* Estilo para el contenedor del formulario */
+#formulario {
+    border: 2px solid #000; /* Borde negro */
+    padding: 20px; /* Espacio interior */
+    margin-bottom: 20px; /* Espacio inferior */
+    background-color: #f8f9fa; /* Color de fondo blanco grisáceo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para las etiquetas del formulario */
+#formulario label {
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.1em; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Espacio inferior */
+    display: block; /* Bloque para mejor control de layout */
+    color: #000; /* Texto negro */
+}
+
+/* Estilo para los campos del formulario */
+#formulario .form-control {
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio inferior */
+    padding: 10px; /* Espacio interior */
+    font-size: 1em; /* Tamaño de fuente */
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+}
+
+/* Estilo para los botones del formulario */
+#formulario .btn {
+    font-size: 1em; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espacio interior */
+    margin-top: 10px; /* Espacio superior */
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+
+#formulario .btn:hover {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    border-color: #000; /* Borde negro */
+}
+
+/* Estilo para la tabla */
+.table {
+    border: 1px solid #000; /* Borde negro */
+    border-collapse: collapse; /* Colapsar bordes */
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid #000; /* Borde negro */
+    padding: 8px; /* Espacio interior */
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+.table thead {
+    background-color: #343a40; /* Fondo gris oscuro para encabezado */
+    color: #fff; /* Texto blanco para encabezado */
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fondo gris claro para filas impares */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Fondo blanco para filas pares */
+}
+
+.table tbody tr:hover {
+    background-color: #ddd; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Estilo para el botón "Atrás" */
+.btn-back {
+    position: absolute; /* Posiciona el botón fuera del flujo del documento */
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la parte izquierda */
+    background-color: #000000; /* Color de fondo gris */
+    border: 1px solid #000; /* Borde gris */
+    color: #fafafa; /* Texto blanco */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espacio interior */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+
+.btn-back:hover {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto gris */
+    border-color: #0d0d0e; /* Borde gris */
+}
+
+/* Estilo para el contenedor de la tabla */
+.table-responsive {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.alert {
+    color: #000; /* Texto negro */
+    background-color: #f8f9fa; /* Fondo blanco grisáceo */
+    border: 1px solid #000; /* Borde negro */
+}
+
+/* Estilo para el título */
+h2 {
+    color: #000; /* Texto negro */
+}

@@ -18,7 +18,8 @@
 </head>
 <body>
     <div id="app">
-        <?php if(!in_array(Route::currentRouteName(), ['login', 'register' , 'categoria_productos', 'almacenes'])): ?>
+
+        <?php if(!request()->is('categoria_productos', 'almacenes', 'regla_abastecimiento')): ?>
             <?php echo $__env->make('layouts.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php endif; ?>
 
