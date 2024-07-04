@@ -1,0 +1,106 @@
+/* Estilo para el contenedor principal */
+.container {
+    border: 2px solid #000; /* Borde negro */
+    padding: 20px; /* Espaciado interior */
+    margin-bottom: 20px; /* Margen inferior */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para las etiquetas del formulario */
+label {
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.1em; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
+    color: #000; /* Texto negro */
+    margin-right: 10px; /* Margen derecho */
+    white-space: nowrap; /* Evitar envolver el texto */
+}
+
+/* Estilo para los campos del formulario */
+.form-control {
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interior */
+    font-size: 1em; /* Tamaño de fuente */
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    margin-right: 10px; /* Margen derecho */
+    display: inline-block; /* Mostrar en línea */
+    width: auto; /* Ancho automático */
+}
+
+/* Estilo para el formulario en línea */
+.form-inline {
+    display: flex; /* Mostrar flex para alineación horizontal */
+    flex-wrap: wrap; /* Permitir envolver elementos */
+    align-items: center; /* Alinear elementos verticalmente */
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones del formulario */
+.btn {
+    font-size: 1em; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espaciado interior */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #000; /* Borde negro */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transiciones suaves */
+    margin-left: 10px; /* Margen izquierdo */
+}
+
+.btn:hover {
+    background-color: #fff; /* Fondo blanco al pasar el mouse */
+    color: #000; /* Texto negro al pasar el mouse */
+    border-color: #000; /* Borde negro al pasar el mouse */
+}
+
+/* Estilo para la tabla */
+.table {
+    border: 1px solid #000; /* Borde negro */
+    border-collapse: collapse; /* Colapsar bordes */
+    width: 100%;
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.table th,
+.table td {
+    border: 1px solid #000; /* Borde negro */
+    padding: 8px; /* Espaciado interior */
+    text-align: left; /* Alineación de texto izquierda */
+}
+
+.table thead {
+    background-color: #343a40; /* Fondo gris oscuro para encabezado */
+    color: #fff; /* Texto blanco para encabezado */
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fondo gris claro para filas impares */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Fondo blanco para filas pares */
+}
+
+.table tbody tr:hover {
+    background-color: #ddd; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Estilo para el título */
+h2 {
+    color: #000; /* Texto negro */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para las alertas */
+.alert {
+    color: #000; /* Texto negro */
+    background-color: #f8f9fa; /* Fondo blanco grisáceo */
+    border: 1px solid #000; /* Borde negro */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}

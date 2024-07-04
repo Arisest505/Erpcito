@@ -19,7 +19,7 @@
 <body>
     <div id="app">
 
-        @if (!request()->is('categoria_productos', 'almacenes', 'regla_abastecimiento'))
+        @if (!request()->is('categoria_productos*', 'almacenes*', 'regla_abastecimiento*', 'unidad_medida*', 'logistica/stock*', 'historial_movimientos*', 'analisis_movimiento*', 'rendimiento*', 'productos*', 'seguimiento*', 'recepcion*', 'entrega*', 'inventario*'))
             @include('layouts.navbar')
         @endif
 

@@ -25,11 +25,8 @@
             </div>
         </form>
 
-        <?php if($products->isEmpty()): ?>
-            <div class="alert alert-info" role="alert">
-                No hay productos disponibles.
-            </div>
-        <?php else: ?>
+        <!-- Tabla de productos -->
+        <?php if(!empty($products) && count($products) > 0): ?>
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
@@ -65,6 +62,10 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>
                 </table>
+            </div>
+        <?php else: ?>
+            <div class="alert alert-info" role="alert">
+                No hay productos disponibles.
             </div>
         <?php endif; ?>
     </div>

@@ -26,11 +26,8 @@
             </div>
         </form>
 
-        @if($products->isEmpty())
-            <div class="alert alert-info" role="alert">
-                No hay productos disponibles.
-            </div>
-        @else
+        <!-- Tabla de productos -->
+        @if(!empty($products) && count($products) > 0)
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
@@ -66,6 +63,10 @@
                         @endforeach
                     </tbody>
                 </table>
+            </div>
+        @else
+            <div class="alert alert-info" role="alert">
+                No hay productos disponibles.
             </div>
         @endif
     </div>

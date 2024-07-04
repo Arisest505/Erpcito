@@ -122,6 +122,44 @@
         loadReglaAbastecimientoContent();
     });
 
+        // Unidad de Medida
+        var unidadMedidaLink = document.querySelector('.dropdown-container a[href="<?php echo e(route('unidad_medida')); ?>"]');
+        unidadMedidaLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        loadUnidadMedidaContent();
+    });
+
+    function  loadUnidadMedidaContent() {
+        fetch("<?php echo e(route('unidad_medida')); ?>")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('dynamic-content').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error al cargar el contenido de Categoría Productos:', error);
+            });
+    }
+
+            // Stock
+            var StockLink = document.querySelector('.dropdown-container a[href="<?php echo e(route('stock')); ?>"]');
+            StockLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        loadStockContent();
+    });
+
+    function  loadStockContent() {
+        fetch("<?php echo e(route('stock')); ?>")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('dynamic-content').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error al cargar el contenido de Categoría Productos:', error);
+            });
+    }
+
+
+
 
     function loadCategoriaProductosContent() {
         fetch("<?php echo e(route('categoria_productos.index')); ?>")
@@ -133,7 +171,6 @@
                 console.error('Error al cargar el contenido de Categoría Productos:', error);
             });
     }
-
 
 
     // Agregar más eventos clic para otros enlaces de menú según sea necesario

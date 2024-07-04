@@ -5,6 +5,7 @@ use App\Http\Controllers\AlmacenController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BackupController;
 use App\Http\Controllers\SupplyRuleController;
+use App\Http\Controllers\UnidadMedidaController;
 
 
 
@@ -97,9 +98,18 @@ Route::put('/almacens/{id}', [AlmacenController::class, 'update'])->name('almace
 Route::get('/backup', [BackupController::class, 'download'])->name('backup.download');
 
 // Ruta para mostrar la lista de productos
-Route::get('/categoria_productos', [ProductController::class, 'index'])->name('categoria_productos.index');
+Route::get('/categoria_productos', [ProductController::class, 'categoria_productos'])->name('categoria_productos.index');
 
 // Rutas para regla de abastecimiento
 Route::resource('supply_rules', SupplyRuleController::class);
 Route::get('/regla_abastecimiento', [SupplyRuleController::class, 'index'])->name('regla_abastecimiento');
 Route::post('/supply_rules', [SupplyRuleController::class, 'store'])->name('supply_rules.store');
+
+//Ruta de unidad de medida
+Route::get('/unidad_medida', [UnidadMedidaController::class, 'index'])->name('unidad_medida');
+
+//Ruta de stock
+Route::get('/logistica/stock', [ProductController::class, 'index'])->name('stock');
+Route::get('/logistica/stock/search', [ProductController::class, 'search'])->name('stock.search');
+
+
