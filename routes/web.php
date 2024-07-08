@@ -6,6 +6,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BackupController;
 use App\Http\Controllers\SupplyRuleController;
 use App\Http\Controllers\UnidadMedidaController;
+use App\Http\Controllers\ProductMainController;
+
 
 
 
@@ -109,7 +111,17 @@ Route::post('/supply_rules', [SupplyRuleController::class, 'store'])->name('supp
 Route::get('/unidad_medida', [UnidadMedidaController::class, 'index'])->name('unidad_medida');
 
 //Ruta de stock
-Route::get('/logistica/stock', [ProductController::class, 'index'])->name('stock');
+Route::get('/stock', [ProductController::class, 'stock'])->name('stock');
+
 Route::get('/logistica/stock/search', [ProductController::class, 'search'])->name('stock.search');
 
 
+
+// Rutas para la gestión de productos
+Route::resource('productos', ProductMainController::class);
+Route::get('/productos', [ProductMainController::class, 'index'])->name('productos.index');
+Route::get('/productos/crear', [ProductMainController::class, 'create'])->name('productos.create');
+Route::post('/productos', [ProductMainController::class, 'store'])->name('productos.store');
+Route::get('/productos/{id}/editar', [ProductMainController::class, 'edit'])->name('productos.edit');
+Route::put('/productos/{id}', [ProductMainController::class, 'update'])->name('productos.update');
+Route::delete('/productos/{id}', [ProductMainController::class, 'destroy'])->name('productos.destroy');

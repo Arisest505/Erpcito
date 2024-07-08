@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,9 +13,6 @@ class Almacen extends Model
 
     // Define los campos que se pueden asignar masivamente
     protected $fillable = ['nombre'];
-
-    // Si la tabla no usa timestamps, descomenta la siguiente línea
-    // public $timestamps = false;
 
     // Relación con productos
     public function products()
